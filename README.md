@@ -7,4 +7,3 @@ pip install -r requirements.txt
 ```
 
 Output: `early_engagement_by_month.png`, `lorenz_curves.png`, `region_analysis_extra.png`, `user_profile_dashboard.png`.
-# usage_analysis
