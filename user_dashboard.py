@@ -2,13 +2,10 @@ import sys
 import os
 
 # Load your CSV file: use first CLI arg if present (verify it exists), otherwise default to "table.csv"
-if len(sys.argv) > 1:
-    infile = sys.argv[1]
-    if not os.path.exists(infile):
-        print(f"Error: input file '{infile}' not found.", file=sys.stderr)
-        sys.exit(1)
-else:
-    infile = 'table.csv'
+infile = sys.argv[1] if len(sys.argv) > 1 else 'table.csv'
+if not os.path.exists(infile):
+    print(f"Error: input file '{infile}' not found.", file=sys.stderr)
+    sys.exit(1)
 
 import pandas as pd
 import matplotlib.pyplot as plt
